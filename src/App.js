@@ -4,7 +4,7 @@ import store from "./redux/store";
 import CakeContainer from "./components/CakeContainer";
 import NewCakeContainer from "./components/NewCakeContainer";
 import HooksCakeContainer from "./components/HooksCakeContainer";
-import IceCreamContainer from "./components/iceCreamContainer";
+import IceCreamContainer from "./components/IceCreamContainer";
 import CookiesContainer from "./components/CookiesContainer";
 
 function App() {

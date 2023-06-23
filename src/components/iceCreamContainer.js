@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { buyIceCream } from "../redux";
 
-const iceCreamContainer = (props) => {
+const IceCreamContainer = (props) => {
+  const [number, setNumber] = useState(1);
   return (
     <div>
       <h2>Number of icecreams - {props.numOfIceCreams}</h2>
-      <button onClick={props.buyIceCream}>Buy Icecream</button>
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}
+      />
+      <button onClick={() => props.buyIceCream(number)}>
+        Buy {number} Icecream
+      </button>
     </div>
   );
 };
@@ -19,8 +27,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    buyIceCream: () => dispatch(buyIceCream()),
+    buyIceCream: (number) => dispatch(buyIceCream(number)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(iceCreamContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(IceCreamContainer);

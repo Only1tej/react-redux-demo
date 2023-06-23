@@ -13,6 +13,7 @@ const NewCakeContainer = (props) => {
         onChange={(e) => setNumber(e.target.value)}
       />
       <button onClick={() => props.buyCake(number)}>Buy {number} Cake</button>
+      <p>You just bought {number} cakes</p>
     </div>
   );
 };
