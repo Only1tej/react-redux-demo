@@ -2,7 +2,7 @@ import {
   FETCH_USERS_FAILURE,
   FETCH_USERS_REQUEST,
   FETCH_USERS_SUCCESS,
-} from "./UserTypes";
+} from "./userTypes";
 
 const initialState = {
   loading: false,
