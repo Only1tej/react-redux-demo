@@ -13,6 +13,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
+        <UserContainer />
         {/* <ItemContainer cake />
         <ItemContainer />
         <HooksCakeContainer />
@@ -20,7 +21,6 @@ function App() {
         <NewCakeContainer />
         <IceCreamContainer />
         <CookiesContainer /> */}
-        <UserContainer />
       </div>
     </Provider>
   );

@@ -12,7 +12,7 @@ function UserContainer({ userData, fetchUsers }) {
     <h2> {userData.error}</h2>
   ) : (
     <div>
-      <h2>User List</h2>
+      <h2>Users List</h2>
       <div>
         {userData &&
           userData.users &&
@@ -30,7 +30,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUsers: dispatch(fetchUsers()),
+    fetchUsers: () => dispatch(fetchUsers()),
   };
 };
 
